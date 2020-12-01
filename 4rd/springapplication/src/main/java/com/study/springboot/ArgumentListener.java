@@ -14,7 +14,7 @@ public class ArgumentListener {
 	public ArgumentListener(ApplicationArguments arguments) {
 		System.out.println("==========ArgumentListener==========");
 		System.out.println("foo: " + arguments.containsOption("foo"));
-		System.out.println("bar: "+ arguments.containsOption("bar"));
+		System.out.println("bar: " + arguments.containsOption("bar"));
 		System.out.println("========================================");
 	}
 }
