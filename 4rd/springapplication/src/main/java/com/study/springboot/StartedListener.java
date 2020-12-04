@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class StartedListener implements ApplicationListener<ApplicationStartedEvent>{
-
-
 	@Override
 	public void onApplicationEvent(ApplicationStartedEvent event) {
 		// TODO Auto-generated method stub

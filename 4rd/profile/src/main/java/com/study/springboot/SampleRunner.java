@@ -17,7 +17,6 @@ public class SampleRunner implements ApplicationRunner{
 	@Autowired
 	private PropertiesRef propertiesRef;
 	
-	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("======================");
