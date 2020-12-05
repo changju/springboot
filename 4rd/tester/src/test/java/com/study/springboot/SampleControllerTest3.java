@@ -35,7 +35,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SampleControllerTest3 {
-
+	
 	// spring-boot-starter-webflux 추
 	@Autowired
 	WebTestClient webTestClient;
@@ -49,7 +49,7 @@ public class SampleControllerTest3 {
 	@Test
 	public void hello() throws Exception {
 		//when(mockSampleService.getName()).thenReturn("changbonglee");
-		// mock 이 아닌 실제 사용 된 SampleService 빈을 사용 
+		// mock 이 아닌 실제 사용 된 SampleService 빈을 사용할때 @MockBean 를 등록하고 값을 when으로 등록
 		webTestClient.get().uri("/hello").exchange()
 		.expectStatus().isOk().expectBody(String.class)
 		.isEqualTo("hello changjulee");

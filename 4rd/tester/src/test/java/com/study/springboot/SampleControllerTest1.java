@@ -16,8 +16,8 @@ import org.springframework.test.web.servlet.MockMvc;
  * @SpringBootTest
  * - @RunWith(SpringRunner.class) 와 같이 써야 함.
  * - webEnvironment
- *   - MOCK: mock servlet environment 내장 톰캣 구동 안
- *   - RANDOM_PORT, DEFINED_PORT: 내장 톰캣 사용 함
+ *   - MOCK: mock servlet environment 내장 컨테이너(예: 톰켓) 구동 안함
+ *   - RANDOM_PORT, DEFINED_PORT: 내장 컨테이너(예: 톰켓) 사용 함
  *   - NONE: 서블릿 환경 제공 안 함.
  * */
 @RunWith(SpringRunner.class)
