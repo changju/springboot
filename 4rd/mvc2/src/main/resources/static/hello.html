@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+static-hello static resource
+
+
+<!-- 
+  jquery나 typescript같은 스크립트를 java 내부에서 사용을 하기 위해서는 webjar를 추가해야 한다.
+  
+  아래 webjar 항목을 하여야 jquery 추가가 가능하
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+
+         from /webjars/jquery/3.3.1/dist/jquery.min.js // 버전 생략을 하기 위해서는 아래 dependency 추가해야 한다.
+         to   /webjars/jquery/dist/jquery.min.js       
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>0.40</version>
+		</dependency>
+ -->
+<script src="/webjars/jquery/dist/jquery.min.js"></script>
+<script>
+   $(function() {
+       console.log("ready!");
+       alert("ready!");
+   });
+</script>
+</body>
+</html>
