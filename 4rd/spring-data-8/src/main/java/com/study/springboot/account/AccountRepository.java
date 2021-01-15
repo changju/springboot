@@ -11,19 +11,10 @@ import org.neo4j.ogm.annotation.Relationship;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
 
-@Getter
-@Setter
-@NodeEntity
-public class Account {
+
+public interface AccountRepository extends Neo4jRepository<Account, Long> {
 	
-	@Id  // Neo4j에서 @Id는 숫자타입 에만 쓸 수 있다. 
-	@GeneratedValue
-	private Long id;
 	
-	private String username;
-	private String email;
-	
-	@Relationship(type = "has")
-	private Set<Role> roles = new HashSet<>();
 }

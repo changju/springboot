@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /*
-스프링 웹 MVC 11부: CORS
+[39. 스프링 웹 MVC 11부: CORS]
 
  - SOP과 CORS
     Single-Origin Policy
@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Application {
 
 	//특정 함수 혹은 클래스에 적용 할 수 있다.
-	//@CrossOrigin(origins = "http://localhost:18080")
+	//@CrossOrigin(origins = "http://localhost:18080")는 WebMvcConfigurer 를 사용하여 확장을 하여 사용하는것이 유리하다.
 	@GetMapping("/hello")
 	public String hello() {
 		return "Hello";

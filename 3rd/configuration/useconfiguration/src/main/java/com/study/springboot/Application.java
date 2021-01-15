@@ -11,7 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /*
- @SpringBootApplication
+[9. 자동 설정 이해]
+ * @EnableAutoConfiguration (@SpringBootApplication 안에 숨어 있음)
  * 빈은 사실 두 단계로 나눠서 읽힘
   1단계: @ComponentScan
   2단계: @EnableAutoConfiguration

@@ -33,8 +33,8 @@ import org.springframework.context.annotation.ComponentScan;
    LDAP --  생략
    InfluxDB --  생략 
 
-------------------------------------------------------------
-
+-----------------------------------------------------------
+DataSourceAutoConfiguration
 [스프링 데이터 2부: 인메모리 데이터베이스]
 
 - 지원하는 인-메모리 데이터베이스

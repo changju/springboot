@@ -36,7 +36,7 @@ import static org.mockito.Mockito.when;
 @WebMvcTest(SampleController.class)
 public class SampleControllerTest5 {
 
-	//log를 비롯하여 콘솔의 로그를 캡쳐한다.
+	//log를 비롯하여 콘솔의 로그를 캡쳐한다. (System.out.println 도 캡쳐가 된다)
 	@Rule
 	public OutputCapture outputCapture = new OutputCapture();
 	
@@ -55,6 +55,7 @@ public class SampleControllerTest5 {
 		mockMvc.perform(get("/hello")).andExpect(content().string("hello changbonglee"));
 		
 		//logger를 통한 log나 System.out.println 을 통한 log를 아래 명령어로 확인한다.
+		// changju hello 와 skip 둘 다 들어있는지 확인을 한다.
 		assertThat(outputCapture.toString()).contains("changju hello").contains("skip");
 
 	}

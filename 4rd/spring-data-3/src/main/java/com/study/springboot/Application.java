@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /*
-[스프링 데이터 4부: PostgreSQL]
+[43. 스프링 데이터 4부: PostgreSQL]
 
  - 의존성 추가
     <dependency>

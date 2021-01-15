@@ -11,9 +11,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 [스프링 데이터 3부: MySQL]
 
- - 지원하는 DBCP
-    HikariCP (기본)
-    https://github.com/brettwooldridge/HikariCP#frequently-used
+ - 지원하는 DBCP (커넥션을 미리 만들어 놓고, 가져가서 사용하는 구조이다)
+    HikariCP ( 스프링부트의 기본 DBCP이다 )
+      https://github.com/brettwooldridge/HikariCP#frequently-used
     Tomcat CP
     Commons DBCP2
 

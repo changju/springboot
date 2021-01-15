@@ -8,22 +8,17 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /*
- @SpringBootApplication
- * 빈은 사실 두 단계로 나눠서 읽힘
-  1단계: @ComponentScan
-  2단계: @EnableAutoConfiguration
-  @ComponentScan (@Component annotation 을 bean으로 등록)
-    @Component
-	 @Configuration @Repository @Service @Controller @RestController
-  @EnableAutoConfiguration
-	- spring.factories (meta file)
-	   org.springframework.boot.autoconfigure.EnableAutoConfiguration 의 키 값 아래에 있는 조건의 bean을 등록한다.	    
-    - @Configuration
-	- @ConditionalOnXxxYyyZzz
-
-@SpringBootConfiguration
-@ComponentScan 
-@EnableAutoConfiguration
+ * 
+[SpringApplication 2부]
+ - ApplicationEvent 등록
+      ApplicationContext를 만들기 전에 사용하는 리스너는 @Bean으로 등록할 수 없다.
+         SpringApplication.addListners()
+ - WebApplicationType 설정
+ - 애플리케이션 아규먼트 사용하기
+      ApplicationArguments를 빈으로 등록해 주니까 가져다 쓰면 됨.
+ -  애플리케이션 실행한 뒤 뭔가 실행하고 싶을 때
+      ApplicationRunner (추천) 또는 CommandLineRunner
+      순서 지정 가능 @Order
  * */
 @SpringBootApplication
 public class Application {

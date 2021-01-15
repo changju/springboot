@@ -1,5 +1,7 @@
 package com.study.springboot;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -16,7 +18,7 @@ import com.study.springboot.account.Account;
 import com.study.springboot.account.AccountRepository;
 
 /*
-[스프링 데이터 10부: MongoDB]
+[49. 스프링 데이터 10부: MongoDB]
  - MongoDB는 JSON 기반의 도큐먼트 데이터베이스입니다.
 
  - 의존성 추가
@@ -37,6 +39,7 @@ import com.study.springboot.account.AccountRepository;
     de.flapdoodle.embed:de.flapdoodle.embed.mongo
     @DataMongoTest
  * */
+
 @SpringBootApplication
 public class Application {
 
@@ -79,7 +82,10 @@ public class Application {
 			account2.setUsername("changejulee2");
 			accountRepository.save(account2);
 			
-			
+			Optional<Account> oAccount = accountRepository.findByEmail("gulgulriju2@gmail.com");
+			oAccount.ifPresent(c ->{
+				System.out.println(c.toString());
+			});
 			
 			System.out.println("finished");
 		};

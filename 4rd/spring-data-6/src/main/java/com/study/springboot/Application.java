@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /*
-[스프링 데이터 9부: Redis]
+[48. 스프링 데이터 9부: Redis]
 - 캐시, 메시지 브로커, 키/밸류 스토어 등으로 사용 가능.
 
 - 의존성 추가
@@ -32,7 +32,12 @@ import org.springframework.context.annotation.ComponentScan;
 
 - 커스터마이징
    spring.redis.*
-
+   
+- 간단한 redis 문
+  keys *
+  get hello
+  hget hashcode email
+  hgetall hashcode
  * */
 @SpringBootApplication
 public class Application {

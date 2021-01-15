@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /*
-[스프링 데이터 11부: Neo4j]
+[50. 스프링 데이터 11부: Neo4j]
  - Neo4j는 노드간의 연관 관계를 영속화하는데 유리한 그래프 데이터베이스 입니다. 
 
  - 의존성 추가

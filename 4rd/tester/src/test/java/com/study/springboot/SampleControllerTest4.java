@@ -33,13 +33,12 @@ import static org.mockito.Mockito.when;
  *  @DataJpaTest : @Repository 만 등록 됨.
  * */
 @RunWith(SpringRunner.class)
-@WebMvcTest(SampleController.class)
+@WebMvcTest(SampleController.class) // 컨트롤러 하나만 테스트하는 것
 public class SampleControllerTest4 {
 
 
-	// 실제 서버는 띄우지만 mock 데이터를 넣고 싶을때..
-	// 실제 Controller 에서 사용하고있는 SampleService 를 @MockBean 을 사용하여 아래의
-	// 즉, ApplicationContext에 들어있는 빈을 Mock으로 만든 객체로 교체를 하였다.
+	// slice test를 하기 때문에 controller 를 제외한 나머지는 bean으로 등록이 안되기에
+	// SampleService 같이 사용을 해야 하는것이 있다면, MockBean으로 등록 후 값을 채워 넣어야한다.
 	@MockBean
 	SampleService mockSampleService;
 

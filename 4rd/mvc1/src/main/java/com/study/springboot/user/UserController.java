@@ -26,7 +26,7 @@ public class UserController {
 	 * @Controller 이면서 @ResponseBody 가 없다면 ViewResover는 View를 찾게 된다.
 	 */
 	@PostMapping("/users")
-	public @ResponseBody User create1(@RequestBody User user) {
+	public @ResponseBody User create(@RequestBody User user) {
 		return null;
 	}
 }

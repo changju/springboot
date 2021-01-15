@@ -19,8 +19,11 @@ public class H2Runner implements ApplicationRunner {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
+		
+		//try 해주면 close() 를 해주지 않아도 된다.
 		try (Connection connection = dataSource.getConnection()) {
 			System.out.println(connection.getMetaData().getURL());
 			System.out.println(connection.getMetaData().getUserName());

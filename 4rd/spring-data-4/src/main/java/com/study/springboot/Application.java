@@ -6,11 +6,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-
 /*
-[스프링 데이터 5부: 스프링 데이터 JPA 소]
+[44. 스프링 데이터 5부: 스프링 데이터 JPA 소개]
 - ORM(Object-Relational Mapping)과 JPA (Java Persistence API)  
-   객체와 릴레이션을 맵핑할 때 발생하는 개념적 불일치를 해결하는 프레임워크
+   객체와 릴레이션을 맵핑할 때 발생하는 개념적 불일치를 해결하는 프레임워크(table 과 클래스)
    http://hibernate.org/orm/what-is-an-orm/
    JPA: ORM을 위한 자바 (EE) 표준
 
@@ -18,9 +17,9 @@ import org.springframework.context.annotation.ComponentScan;
    Repository 빈 자동 생성
    쿼리 메소드 자동 구현
    @EnableJpaRepositories (스프링 부트가 자동으로 설정 해줌.)
-   SDJ -> JPA -> Hibernate -> Datasource
+   SDJ(Spring Data JPA) -> JPA -> Hibernate -> Datasource
    
-[스프링 데이터 6부: Spring-Data-JPA 연동]
+[45. 스프링 데이터 6부: Spring-Data-JPA 연동]
  - 스프링 데이터 JPA 의존성 추가
     <dependency>
        <groupId>org.springframework.boot</groupId>
@@ -41,12 +40,12 @@ import org.springframework.context.annotation.ComponentScan;
     H2 DB를 테스트 의존성에 추가하기
     @DataJpaTest (슬라이스 테스트) 작성
     
-[스프링 데이터 7부: 데이터베이스 초기화]
+[46. 스프링 데이터 7부: 데이터베이스 초기화]
  - JPA를 사용한 데이터베이스 초기화
     spring.jpa.hibernate.ddl-auto
     spring.jpa.generate-dll=true로 설정 해줘야 동작함.
 
- - SQL 스크립트를 사용한 데이터베이스 초기화
+ - SQL 스크립트를 사용한 데이터베이스 초기화 (스키마 생성시 hibernate 를 사용하지 않더라도 table 생성하기)
     schema.sql 또는 schema-${platform}.sql
     data.sql 또는 data-${platform}.sql
     ${platform} 값은 spring.datasource.platform 으로 설정 가능.

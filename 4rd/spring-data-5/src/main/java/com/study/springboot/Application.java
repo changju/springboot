@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /*
-[스프링 데이터 8부: 데이터베이스 마이그레이션]
+[47. 스프링 데이터 8부: 데이터베이스 마이그레이션]
   Flyway와 Liquibase가 대표적인데, 지금은 Flyway를 사용하겠습니다.
 
   https://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup

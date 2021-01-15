@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-// collection 은 rdb 에서 table이
+// collection 은 rdb 에서 table을 뜻한다.
 @Document(collection = "accounts")
 public class Account {
 	@Id

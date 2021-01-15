@@ -19,11 +19,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.study.springboot.account.Account;
 import com.study.springboot.account.AccountRepository;
 
-//jpa 관련 bean 만 슬라이싱 하여 테스트 할 수 있다.
-//슬라이싱 테스트 일 때는 inmemory db (h2)  를 추가해야 에러가 발생하지 않는다.
+// jpa 관련 bean 만 슬라이싱 하여 테스트 할 수 있다.
+// 슬라이싱-테스트 일 때는 inmemory db (h2)  를 추가해야 에러가 발생하지 않는다.
+// 슬라이싱-테스트의 경우 기본이 inmemory db (h2) 이다.
 @RunWith(SpringRunner.class)
 @DataJpaTest
 //@SpringBootTest //슬라이싱이 아닌 모든 빈들이 등록이 되어 테스트가 진행이 된다.
+                  //이경우 application.properties 에 있는 db를 사용하게 된다.
+                  //@SpringBootTest(properties="spring.datasource.url=")
 public class AccountRepositoryTest {
 
 	@Autowired
@@ -44,8 +47,6 @@ public class AccountRepositoryTest {
 			System.out.println(connection.getMetaData().getURL());
 			System.out.println(connection.getMetaData().getDriverName());
 			System.out.println(connection.getMetaData().getUserName());
-
-			
 		}
 		
 		Account account = new Account();
@@ -58,13 +59,12 @@ public class AccountRepositoryTest {
 		Optional<Account> existingAccount1 = accountRepository.findByUsername(newAccount.getUsername());
 		assertThat(existingAccount1).isNotEmpty();
 		
+		//Optional의 경우 OptionalAssert 가 따로 있음.
 		Optional<Account> existingAccount2 = accountRepository.findByUsername("changbonglee");
 		assertThat(existingAccount2).isNotEmpty();
 		
 		Optional<Account> existingAccount3 = accountRepository.findByUsername("jiyoonlee");
-		assertThat(existingAccount3).isEmpty();
-		
-		
+		assertThat(existingAccount3).isEmpty();		
 		
 	}
 }

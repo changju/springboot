@@ -35,6 +35,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SampleControllerTest2 {
 	
+	// 실제 서버가 띄워지고 실제 데이터를 확인해보고 싶을때.
 	@Autowired
 	TestRestTemplate testRestTemplate;
 	
@@ -46,6 +47,8 @@ public class SampleControllerTest2 {
 	
 	@Test
 	public void hello() throws Exception{
+		
+		// Service의 getName이 호출이되면 changbonelee 를 호출하라 라고 Mock을 설정한다.
 		when(mockSampleService.getName()).thenReturn("changbonglee");
 		
 		String result = testRestTemplate.getForObject("/hello", String.class);

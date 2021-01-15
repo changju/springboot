@@ -17,7 +17,7 @@ public class SampleController {
 	public @ResponseBody AppError sampleError(SampleException e) {
 		AppError appError = new AppError();
 		appError.setMessage("error.app.key");
-		appError.setMessage("idk idk idk");
+		appError.setReason("idk idk idk");
 		return appError;
 	}
 

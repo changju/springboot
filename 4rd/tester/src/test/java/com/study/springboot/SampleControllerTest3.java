@@ -36,7 +36,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SampleControllerTest3 {
 	
-	// spring-boot-starter-webflux 추
+	// spring-boot-starter-webflux 추가된 rest client 중 하나
 	@Autowired
 	WebTestClient webTestClient;
 

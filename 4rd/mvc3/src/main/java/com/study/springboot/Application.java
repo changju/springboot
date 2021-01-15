@@ -30,6 +30,8 @@ import org.springframework.context.annotation.ComponentScan;
      예제: https://github.com/thymeleaf/thymeleafexamples-stsm/blob/3.0-master/src/main/webapp/WEB-INF/templates/seedstartermng.html
        - html에  namespace 가 반드시 추가되어야 한다. 
          - <html xmlns:th="http://www.thymeleaf.org"> 를 추가시켜줘야 한다.
+         
+       - 기본적으로 resources/templates 에서 찾게된다.
  * */
 /*
  * 
