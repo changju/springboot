@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /*
  * 
-[23  프로파일]
+[23. 프로파일]
 
   @Profile 애노테이션은 어디에?
     @Configuration

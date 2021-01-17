@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.study.springboot</groupId>
-	<artifactId>spring-boot-chap3-12-web-container</artifactId>
+	<artifactId>spring-boot-chap4-54-rest-client-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<parent>
@@ -12,25 +12,25 @@
 		<version>2.0.3.RELEASE</version>
 	</parent>
 
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<!--  기본은 tomcat이다 tomcat을 제외한 후 사용해야 한다.
-			<exclusions>
-				<exclusion>
-					<groupId> org.springframework.boot</groupId>
-					<artifactId> spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-			 -->
 		</dependency>
-		<!-- 
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-		 -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

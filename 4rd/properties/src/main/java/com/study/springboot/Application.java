@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 /*
  * 
  *
-[외부 설정 1부]
+[21. 외부 설정 1부]
 https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config
 
 사용할 수 있는 외부 설정

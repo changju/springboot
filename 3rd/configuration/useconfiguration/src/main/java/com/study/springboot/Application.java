@@ -42,7 +42,7 @@ public class Application {
 	/*
 	 * ComponentScan 으로 Bean으로 등록이 된다.
 	 * EnableAutoConfiguration 에서 등록을 하기 때문에  오버라이드 된다.
-	 * @ConditionalOnMissingBean 가 정의가 안되어 있다면, 내가 정의한 bean은 사용 할 수 없다.
+	 * @ConditionalOnMissingBean의 의미는 Bean의\ 정의가 안되어 있다면, 내가 정의한 bean은 사용 할 수 없다.
 	@Bean
 	public PrettyFather prettyFather()
 	{
