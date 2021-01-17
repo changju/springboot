@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.study.springboot</groupId>
-	<artifactId>spring-boot-chap3-9-autoconfiguration-1-use</artifactId>
+	<artifactId>spring-boot-chap3-09-autoconfiguration-1-use</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<parent>
@@ -21,7 +21,7 @@
 
 		<dependency>
 			<groupId>com.study.springboot</groupId>
-			<artifactId>spring-boot-autoconfiguration</artifactId>
+			<artifactId>spring-boot-chap3-10-autoconfiguration-2-provider</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
