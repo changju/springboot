@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient.Builder;
 
 /*
-[55. 스프링 REST 클라이언트 2부: 커스터마이징 ]
+[ 55. 스프링 REST 클라이언트 2부: 커스터마이징 ]
  - RestTemplate
     기본으로 java.net.HttpURLConnection 사용.
     커스터마이징

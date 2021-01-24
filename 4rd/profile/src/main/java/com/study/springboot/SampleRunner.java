@@ -31,6 +31,12 @@ public class SampleRunner implements ApplicationRunner{
 		System.out.println(propertiesRef.getProddb());
 		System.out.println("======================");
 		
+		// application.properties 를 읽고 --spring.profiles.active 의 properties 로 오버라이드 하게 된다.
+		System.out.println("======================");
+		System.out.println(propertiesRef.getUserId());
+		System.out.println("======================");
+		
+		
 	}
 
 }

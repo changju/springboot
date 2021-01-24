@@ -32,7 +32,7 @@ public class PropertiesRef2 {
 	int age;
 	
 	// application.properties 에 sessionTimeout가 30으로 정의가 되어있는데 30은 해당 값으로 프로퍼티의 컨버전이 발생한다.
-	//spring type conversion 에 의해서 Type이 변경이 되어 들어간다.
+	// spring type conversion 에 의해서 Type이 변경이 되어 들어간다.
 	@DurationUnit(ChronoUnit.SECONDS)
 	private Duration sessionTimeout = Duration.ofSeconds(30);
 

@@ -11,7 +11,9 @@ import lombok.Setter;
 @Component
 @ConfigurationProperties("my")
 public class PropertiesRef {
+	private String user;
 	private String name;
 	private String proddb;
+	private String userId;
 	
 }

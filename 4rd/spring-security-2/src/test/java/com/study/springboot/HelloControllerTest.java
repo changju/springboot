@@ -52,7 +52,7 @@ public class HelloControllerTest {
 		mockMvc.perform(get("/my"))
 		       .andDo(print())
 		       .andExpect(status().isOk())
-		       .andExpect(view().name("my"));;
+		       .andExpect(view().name("my"));
 		
 	}
 	

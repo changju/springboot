@@ -17,6 +17,9 @@ public class ApplicationRunnerListener implements ApplicationRunner{
 	@Autowired
 	PropertiesRef2 properties2;
 	
+	@Autowired
+	ServerProperties serverProperties;
+	
 	// ServerProperties 는 이미 bean 으로 등록이 되어 있기 때문에
 	// @Component 로 하여 bean 등록하지 못하기에 아래와 같이 할 수 있다.  
 	@ConfigurationProperties("server")
@@ -26,15 +29,20 @@ public class ApplicationRunnerListener implements ApplicationRunner{
 	}
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("=======================");
+		System.out.println("properties1=======================");
 		System.out.println(properties1.getName());
 		System.out.println("=======================");
 		
 		//효율적으로 properties 값을 가져오기
-		System.out.println("=======================");
+		System.out.println("properties2=======================");
 		System.out.println(properties2.getName());
 		System.out.println(properties2.getAge());
 		System.out.println(properties2.getSessionTimeout());
+		System.out.println(properties2.getSessionTimeout().getSeconds());
+		System.out.println("=======================");
+		
+		System.out.println("serverProperties=======================");
+		System.out.println(serverProperties.getPort());
 		System.out.println("=======================");
 		
 	}
