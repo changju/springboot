@@ -5,6 +5,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+//@EnableConfigurationProperties 가 있어야 bean으로 등록을 해주고 meta 정보에서 값 을 넣어준다.
+//@EnableConfigurationProperties(PrettyFatherProperties.class)
+
 @Configuration
 @EnableConfigurationProperties(PrettyFatherProperties.class)
 public class PrettyFatherConfiguration {

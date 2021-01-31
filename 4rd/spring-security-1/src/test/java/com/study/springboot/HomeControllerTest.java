@@ -33,7 +33,7 @@ public class HomeControllerTest {
 		               .accept(MediaType.TEXT_HTML))
 		       .andDo(print())
 		       .andExpect(status().isOk())
-		       .andExpect(view().name("hello"));;
+		       .andExpect(view().name("hello"));
 		
 	}
 	

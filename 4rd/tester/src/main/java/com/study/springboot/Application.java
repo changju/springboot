@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /*
 [26. 테스트]
- - 시작은 일단 spring-boot-starter-test를 추가하는 것 부터
+- 시작은 일단 maven dependency에 spring-boot-starter-test를 추가하는 것 부터
     test 스콥으로 추가.
 
 - @SpringBootTest 

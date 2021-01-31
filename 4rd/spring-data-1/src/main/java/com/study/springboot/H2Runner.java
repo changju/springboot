@@ -31,7 +31,7 @@ public class H2Runner implements ApplicationRunner {
 			Statement statement = connection.createStatement();
 			String sql = "create table if not exists USER (ID INTEGER NOT NULL, name VARCHAR(255))";
 			statement.executeUpdate(sql);
-			// connection.close(); try() 가 있으면 정리를 해준다.
+			// connection.close(); try() 가 있으면 알아서 정리 해준다.
 		}
 		
 		// dataSource 보다는 jdbTemplate 가 더 나은 선택이다.
